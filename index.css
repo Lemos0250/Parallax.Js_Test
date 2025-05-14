@@ -1,0 +1,181 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;800&display=swap");
+
+/* RESET E CONFIGURAÇÕES GERAIS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+}
+
+/* HEADER - MANTIDO COMO ESTAVA */
+header {
+    width: 100%;
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0.9rem 0;
+    z-index: 1000;
+}
+
+.logo {
+    width: 100px;
+}
+
+header nav {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+header ul a {
+    text-decoration: none;
+    color: #fff;
+    padding: 0 1.5rem;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 1rem;
+}
+
+.hamburger a {
+    padding: 0;
+    width: 37px;
+    height: 37px;
+    border-radius: 50%;
+    display: flex;
+    background: rgba(115, 115, 115, .7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    justify-content: center;
+    align-items: center;
+}
+
+.hamburger .bar {
+    position: relative;
+    width: 52%;
+    height: 1.5px;
+    background-color: #fff;
+    border-radius: 2px;
+}
+
+.hamburger .bar::before,
+.hamburger .bar::after {
+    content: "";
+    position: absolute;
+    width: 60%;
+    border-radius: 2px;
+    transform: translateX(-50%);
+    left: 50%;
+    height: 100%;
+    background: inherit;
+}
+
+.hamburger .bar::before {
+    top: -4.5px;
+}
+
+.hamburger .bar::after {
+    top: 4.5px;
+}
+
+/* CONTAINER PRINCIPAL */
+main {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+/* ESTILOS PARALLAX SIMPLIFICADOS */
+.parallax {
+    position: absolute;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition: 0.5s cubic-bezier(0.2, 0.49, 0.32, 0.99);
+}
+
+/* IMAGEM DE FUNDO */
+.bg-img {
+    width: 110%;
+    height: 100%;
+    object-fit: cover;
+    top: 5%;
+    left: 50%;
+    z-index: 1;
+}
+
+/* TEXTO CENTRAL - VERSÃO À PROVA DE ERROS */
+.text {
+    position: absolute;
+    z-index: 9;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+    width: 100%;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    pointer-events: auto;
+}
+
+.text h2 {
+    font-weight: 100;
+    font-size: clamp(2rem, 5vw, 4rem);
+    line-height: 0.9;
+    margin-bottom: -0.5rem;
+}
+
+.text h1 {
+    font-weight: 800;
+    font-size: clamp(3rem, 8vw, 6rem);
+    line-height: 0.9;
+}
+
+/* AJUSTES PARA AS CAMADAS PARALLAX */
+.fog-7 { width: 1900px; top: 30%; left: 60%; z-index: 2; }
+.mountain-10 { width: 892px; top: 60%; left: 65%; z-index: 3; }
+.fog-6 { width: 1610px; top: 70%; left: 50%; z-index: 4; }
+.mountain-9 { width: 470px; top: 55%; left: 20%; z-index: 5; }
+.mountain-8 { width: 1010px; top: 65%; left: 40%; z-index: 6; }
+.fog-5 { width: 450px; top: 60%; left: 55%; z-index: 7; }
+.mountain-7 { width: 538px; top: 80%; left: 70%; z-index: 8; }
+.mountain-6 { width: 408px; top: 55%; left: 85%; z-index: 10; }
+.fog-4 { width: 590px; top: 65%; left: 85%; z-index: 11; }
+.mountain-5 { width: 600px; top: 80%; left: 60%; z-index: 12; }
+.fog-3 { width: 1600px; top: 60%; left: 50%; z-index: 13; }
+.mountain-4 { width: 980px; top: 70%; left: 75%; z-index: 14; }
+.mountain-3 { width: 230px; top: 80%; left: 94%; z-index: 15; }
+.fog-2 { width: 1560px; top: 65%; left: 55%; z-index: 16; }
+.mountain-2 { width: 780px; top: 80%; left: 25%; z-index: 17; }
+.mountain-1 { width: 530px; top: 55%; left: 10%; z-index: 18; }
+.sun-rays { width: 595px; top: 0; right: 0; z-index: 19; }
+.black-shadow { width: 100%; bottom: 0; right: 0; z-index: 20; }
+.fog-1 { width: 110vw; left: 50%; z-index: 21; }
+
+/* VIGNETTE PARA EFEITO DE BORDA */
+.vignette {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 22;
+    background: radial-gradient(ellipse at center, rgba(0,0,0,0) 65%, rgba(0,0,0,0.7));
+    pointer-events: none;
+}
