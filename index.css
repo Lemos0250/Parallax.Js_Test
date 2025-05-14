@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;800&display=swap");
 
-/* RESET E CONFIGURAÇÕES GERAIS */
 * {
     margin: 0;
     padding: 0;
@@ -13,7 +12,6 @@ html, body {
     overflow: hidden;
 }
 
-/* HEADER - MANTIDO COMO ESTAVA */
 header {
     width: 100%;
     border-bottom: 1px solid rgba(0, 0, 0, .1);
@@ -93,7 +91,6 @@ header ul a {
     top: 4.5px;
 }
 
-/* CONTAINER PRINCIPAL */
 main {
     position: relative;
     height: 100vh;
@@ -101,25 +98,21 @@ main {
     overflow: hidden;
 }
 
-/* ESTILOS PARALLAX SIMPLIFICADOS */
 .parallax {
     position: absolute;
     pointer-events: none;
-    transform: translate(-50%, -50%);
-    transition: 0.5s cubic-bezier(0.2, 0.49, 0.32, 0.99);
+    transition: 0.5s cubic-bezier(.2, .49, .32, .99);
 }
 
-/* IMAGEM DE FUNDO */
 .bg-img {
-    width: 110%;
-    height: 100%;
+    width: 2500px;
+    height: 2500px;
     object-fit: cover;
     top: 5%;
     left: 50%;
     z-index: 1;
 }
 
-/* TEXTO CENTRAL - VERSÃO À PROVA DE ERROS */
 .text {
     position: absolute;
     z-index: 9;
@@ -129,7 +122,7 @@ main {
     text-align: center;
     color: #fff;
     text-transform: uppercase;
-    width: 100%;
+    width: 150%;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     pointer-events: auto;
 }
@@ -147,28 +140,26 @@ main {
     line-height: 0.9;
 }
 
-/* AJUSTES PARA AS CAMADAS PARALLAX */
-.fog-7 { width: 1900px; top: 30%; left: 60%; z-index: 2; }
+.fog-7 { width: 2000px; top: 30%; left: 60%; z-index: 2; }
 .mountain-10 { width: 892px; top: 60%; left: 65%; z-index: 3; }
 .fog-6 { width: 1610px; top: 70%; left: 50%; z-index: 4; }
 .mountain-9 { width: 470px; top: 55%; left: 20%; z-index: 5; }
 .mountain-8 { width: 1010px; top: 65%; left: 40%; z-index: 6; }
 .fog-5 { width: 450px; top: 60%; left: 55%; z-index: 7; }
-.mountain-7 { width: 538px; top: 80%; left: 70%; z-index: 8; }
-.mountain-6 { width: 408px; top: 55%; left: 85%; z-index: 10; }
+.mountain-7 { width: 838px; top: 80%; left: 75%; z-index: 8; }
+.mountain-6 { width: 408px; top: 55%; left: 94%; z-index: 10; }
 .fog-4 { width: 590px; top: 65%; left: 85%; z-index: 11; }
 .mountain-5 { width: 600px; top: 80%; left: 60%; z-index: 12; }
-.fog-3 { width: 1600px; top: 60%; left: 50%; z-index: 13; }
-.mountain-4 { width: 980px; top: 70%; left: 75%; z-index: 14; }
-.mountain-3 { width: 230px; top: 80%; left: 94%; z-index: 15; }
-.fog-2 { width: 1560px; top: 65%; left: 55%; z-index: 16; }
-.mountain-2 { width: 780px; top: 80%; left: 25%; z-index: 17; }
+.fog-3 { width: 100%; top: 60%; left: 50%; z-index: 13; }
+.mountain-4 { width: 980px; top: 70%; left: 78%; z-index: 14; }
+.mountain-3 { width: 430px; top: 80%; left: 94%; z-index: 15; }
+.fog-2 { width: 100%; top: 65%; left: 55%; z-index: 16; }
+.mountain-2 { width: 900px; top: 80%; left: 26.5%; z-index: 17; }
 .mountain-1 { width: 530px; top: 55%; left: 10%; z-index: 18; }
 .sun-rays { width: 595px; top: 0; right: 0; z-index: 19; }
 .black-shadow { width: 100%; bottom: 0; right: 0; z-index: 20; }
 .fog-1 { width: 110vw; left: 50%; z-index: 21; }
 
-/* VIGNETTE PARA EFEITO DE BORDA */
 .vignette {
     position: absolute;
     width: 100%;
