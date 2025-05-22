@@ -5,6 +5,28 @@ let xValue = 0,
 
     let rotateDegree = 0;
 
+    function update(cursosPosition) {
+    parallax_el.forEach((el) => {
+        let speedx = el.dataset.speedx;
+        let speedy = el.dataset.speedy;
+        let speedz = el.dataset.speedz;
+        let rotateSpeed = el.dataset.rotation;
+    
+        let isInLeft = parseFloat(getComputedStyle(el).left) < window.innerWidth / 2 ? 1 : -1;
+        let zValue = (cursosPosition - parseFloat(getComputedStyle(el).left)) * isInLeft * 0.1;
+    
+        console.log(zValue);
+    
+        el.style.transform = `translateX(calc(-50% + ${-xValue * speedx}px))
+                              rotateY(${rotateDegree * rotateSpeed}deg)
+                              translateY(calc(-50% + ${yValue * speedy}px))
+                              perspective(2300px)
+                              translateZ(${zValue * speedz}px)`;
+        });
+    }
+
+update(0);
+
 window.addEventListener("mousemove", (e) => {
     xValue = e.clientX - window.innerWidth / 2;
     yValue = e.clientY - window.innerHeight / 2;
@@ -13,23 +35,5 @@ window.addEventListener("mousemove", (e) => {
 
     rotateDegree = (xValue / (window.innerWidth /  2)) * 20;
 
-    console.log(rotateDegree);
-
-    parallax_el.forEach((el) => {
-        let speedx = el.dataset.speedx;
-        let speedy = el.dataset.speedy;
-        let speedz = el.dataset.speedz;
-        let rotateSpeed = el.dataset.rotation;
-
-        let isInLeft = parseFloat(getComputedStyle(el).left) < window.innerWidth / 2 ? 1 : -1;
-        let zValue = (e.clientX - parseFloat(getComputedStyle(el).left)) * isInLeft * 0.1;
-
-        console.log(zValue);
-
-        el.style.transform = `translateX(calc(-50% + ${-xValue * speedx}px))
-                              rotateY(${rotateDegree * rotateSpeed}deg)
-                              translateY(calc(-50% + ${yValue * speedy}px))
-                              perspective(2300px)
-                              translateZ(${zValue * speedz}px)`;
-    });
+    update(e.clientX);
 });
