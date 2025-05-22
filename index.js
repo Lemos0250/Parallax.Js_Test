@@ -7,10 +7,10 @@ let xValue = 0,
 
     function update(cursosPosition) {
     parallax_el.forEach((el) => {
-        let speedx = el.dataset.speedx;
-        let speedy = el.dataset.speedy;
-        let speedz = el.dataset.speedz;
-        let rotateSpeed = el.dataset.rotation;
+        let speedx = el.dataset.speedx || 0;;
+        let speedy = el.dataset.speedy || 0;;
+        let speedz = el.dataset.speedz || 0;;
+        let rotateSpeed = el.dataset.rotation || 0;;
     
         let isInLeft = parseFloat(getComputedStyle(el).left) < window.innerWidth / 2 ? 1 : -1;
         let zValue = (cursosPosition - parseFloat(getComputedStyle(el).left)) * isInLeft * 0.1;
@@ -36,4 +36,23 @@ window.addEventListener("mousemove", (e) => {
     rotateDegree = (xValue / (window.innerWidth /  2)) * 20;
 
     update(e.clientX);
+});
+
+/*Testing GSAP Library Animation*/ 
+
+let timeline = gsap.timeline();
+
+Array.from(parallax_el)
+.filter((el) => !el.classList.contains("text"))
+.forEach((el) => {
+
+    let initialTop = parseFloat(getComputedStyle(el).top) + (+el.dataset.distance || 0);
+
+    gsap.set(el, {top: initialTop});
+
+    timeline.to(el, {
+        top: getComputedStyle(el).top,
+        duration: 1,
+        ease: "power3.out",
+    }, "1"); // Tempo de início da animação
 });
