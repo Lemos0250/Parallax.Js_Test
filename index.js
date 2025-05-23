@@ -28,6 +28,8 @@ let xValue = 0,
 update(0);
 
 window.addEventListener("mousemove", (e) => {
+    if(timeline.isActive()) return;
+
     xValue = e.clientX - window.innerWidth / 2;
     yValue = e.clientY - window.innerHeight / 2;
 
@@ -56,3 +58,17 @@ Array.from(parallax_el)
         ease: "power3.out",
     }, "1"); // Tempo de início da animação
 });
+
+timeline.from(".text h1", {
+    y: window.innerHeight - document.querySelector(".text h1").getBoundingClientRect().top + 200,
+    duration: 2,
+    },"2.5")
+    .from(".text h2", {
+        y:-150,
+        opacity:0,
+        duration:1.5,
+    },"2")
+    .from(".hide", {
+        opacity: 0,
+        duration: 1.5,
+    }, "2")
