@@ -211,6 +211,29 @@ main {
         height: 30px;
         width: 30px;
     }
+    .bg-img {
+        width: initial;
+        height: 311.104%;
+    }
+    .fog-7 { width: 166.67%; top: 30%; left: 60%; z-index: 2; } 
+    .mountain-10 { width: 74.34%; top: 60%; left: 65%; z-index: 3; } 
+    .fog-6 { width: 134.16%; top: 70%; left: 50%; z-index: 4; } 
+    .mountain-9 { width: 39.17%; top: 55%; left: 20%; z-index: 5; } 
+    .mountain-8 { width: 84.16%; top: 65%; left: 40%; z-index: 6; } 
+    .fog-5 { width: 37.50%; top: 60%; left: 55%; z-index: 7; } 
+    .mountain-7 { width: 69.84%; top: 80%; left: 75%; z-index: 8; } 
+    .mountain-6 { width: 34.00%; top: 55%; left: 94%; z-index: 10; } 
+    .fog-4 { width: 49.17%; top: 65%; left: 85%; z-index: 11; } 
+    .mountain-5 { width: 50.00%; top: 80%; left: 60%; z-index: 12; } 
+    .fog-3 { width: 100%; top: 60%; left: 50%; z-index: 13; } 
+    .mountain-4 { width: 81.66%; top: 70%; left: 78%; z-index: 14; } 
+    .mountain-3 { width: 35.84%; top: 80%; left: 94%; z-index: 15; } 
+    .fog-2 { width: 100%; top: 65%; left: 55%; z-index: 16; }
+    .mountain-2 { width: 75.01%; top: 80%; left: 26.5%; z-index: 17; } 
+    .mountain-1 { width: 44.16%; top: 60%; left: 7.50%; z-index: 18; } 
+    .sun-rays { width: 49.58%; top: 0; right: 0; z-index: 19; } 
+    .black-shadow { width: 100%; bottom: 0; right: 0; z-index: 20; } 
+    .fog-1 { width: 110vw; left: 50%; z-index: 21; } 
 }
 
 @media (max-width: 520px) {
