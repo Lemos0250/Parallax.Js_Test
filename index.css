@@ -106,7 +106,7 @@ main {
 }
 
 .bg-img {
-    width: 2500px;
+    width: 130.21%;
     height: 2500px;
     object-fit: cover;
     top: 5%;
@@ -141,25 +141,25 @@ main {
     line-height: 0.9;
 }
 
-.fog-7 { width: 2000px; top: 30%; left: 60%; z-index: 2; }
-.mountain-10 { width: 892px; top: 60%; left: 65%; z-index: 3; }
-.fog-6 { width: 1610px; top: 70%; left: 50%; z-index: 4; }
-.mountain-9 { width: 470px; top: 55%; left: 20%; z-index: 5; }
-.mountain-8 { width: 1010px; top: 65%; left: 40%; z-index: 6; }
-.fog-5 { width: 450px; top: 60%; left: 55%; z-index: 7; }
-.mountain-7 { width: 838px; top: 80%; left: 75%; z-index: 8; }
-.mountain-6 { width: 408px; top: 55%; left: 94%; z-index: 10; }
-.fog-4 { width: 590px; top: 65%; left: 85%; z-index: 11; }
-.mountain-5 { width: 600px; top: 80%; left: 60%; z-index: 12; }
-.fog-3 { width: 100%; top: 60%; left: 50%; z-index: 13; }
-.mountain-4 { width: 980px; top: 70%; left: 78%; z-index: 14; }
-.mountain-3 { width: 430px; top: 80%; left: 94%; z-index: 15; }
-.fog-2 { width: 100%; top: 65%; left: 55%; z-index: 16; }
-.mountain-2 { width: 900px; top: 80%; left: 26.5%; z-index: 17; }
-.mountain-1 { width: 530px; top: 55%; left: 10%; z-index: 18; }
-.sun-rays { width: 595px; top: 0; right: 0; z-index: 19; }
-.black-shadow { width: 100%; bottom: 0; right: 0; z-index: 20; }
-.fog-1 { width: 110vw; left: 50%; z-index: 21; }
+.fog-7 { width: 104.17%; top: 30%; left: 60%; z-index: 2; } 
+.mountain-10 { width: 46.46%; top: 60%; left: 65%; z-index: 3; } 
+.fog-6 { width: 83.85%; top: 70%; left: 50%; z-index: 4; } 
+.mountain-9 { width: 24.48%; top: 55%; left: 20%; z-index: 5; } 
+.mountain-8 { width: 52.60%; top: 65%; left: 40%; z-index: 6; } 
+.fog-5 { width: 23.44%; top: 60%; left: 55%; z-index: 7; } 
+.mountain-7 { width: 43.65%; top: 80%; left: 75%; z-index: 8; } 
+.mountain-6 { width: 21.25%; top: 55%; left: 94%; z-index: 10; } 
+.fog-4 { width: 30.73%; top: 65%; left: 85%; z-index: 11; } 
+.mountain-5 { width: 31.25%; top: 80%; left: 60%; z-index: 12; } 
+.fog-3 { width: 100%; top: 60%; left: 50%; z-index: 13; } 
+.mountain-4 { width: 51.04%; top: 70%; left: 78%; z-index: 14; } 
+.mountain-3 { width: 22.40%; top: 80%; left: 94%; z-index: 15; } 
+.fog-2 { width: 100%; top: 65%; left: 55%; z-index: 16; } 
+.mountain-2 { width: 46.88%; top: 80%; left: 26.5%; z-index: 17; } 
+.mountain-1 { width: 27.60%; top: 60%; left: 7.50%; z-index: 18; } 
+.sun-rays { width: 30.99%; top: 0; right: 0; z-index: 19; } 
+.black-shadow { width: 100%; bottom: 0; right: 0; z-index: 20; } 
+.fog-1 { width: 110vw; left: 50%; z-index: 21; } 
 
 .vignette {
     position: absolute;
@@ -170,4 +170,54 @@ main {
     z-index: 22;
     background: radial-gradient(ellipse at center, rgba(0,0,0,0) 65%, rgba(0,0,0,0.7));
     pointer-events: none;
+}
+
+@media (max-width: 1100px) {
+    .text h1 {
+        font-size: 5.8rem;
+    }
+    .text h2 {
+        font-size: 4.7rem;
+    }
+}
+
+@media (max-width: 1100px) {
+    .text h1 {
+        font-size: 5rem;
+        line-height: 1.1;
+    }
+    .text h2 {
+        font-size: 4.1rem;
+        line-height: 1.1;
+    }
+    header nav {
+        padding: 0 1rem;
+    }
+    .logo {
+        width: 75px;
+    }
+    header ul a {
+        font-size: 0.73rem;
+        padding: 0 0.9rem;
+    }
+    .search a {
+        font-size: 0.85rem;
+        padding: 0 1.8rem;
+    }
+    .hamburger {
+        padding-left: 0.9rem;
+    }
+    .hamburger a{
+        height: 30px;
+        width: 30px;
+    }
+}
+
+@media (max-width: 520px) {
+    .text h1  {
+        font-size: 5.8rem;
+    }
+    .text h2 {
+        font-size: 2.6rem;
+    }
 }
